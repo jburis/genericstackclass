@@ -25,6 +25,11 @@ public class Stack<T> {
         if(stack[topElement] == null) throw new StackEmptyException();
         return stack[topElement];
     }
-
-    public String list
+    public String list() throws StackFullException, StackEmptyException {
+        String output = "";
+        for (int i = topElement; i >= 0; i--){
+            output += stack[i] + "; ";
+        }
+        return output;
+    }
 }
