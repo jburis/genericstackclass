@@ -1,2 +1,5 @@
-public class StackEmptyException extends Exception{
+public class StackEmptyException extends RuntimeException{
+        public StackEmptyException(String param){
+            super(param);
+        }
 }
